@@ -1,0 +1,8 @@
+//@version=5
+// © amarendra_singh
+
+study("Basic", overlay = true)
+highestHigh = highest(high,50)
+lowestLow = lowest(low,50)
+plot(highestHigh)
+plot(lowestLow)
