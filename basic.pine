@@ -51,4 +51,8 @@ AvgOpenPositionPrice()=>
         result += entry_price * size / strategy.position_size
     strategy.opentrades > 0 ? result / strategy.opentrades: na
 
-plot(updateNo, style = plot.style_circles) 
+plot(updateNo, style = plot.style_circles)
+
+rsi = rsi(close,14)
+color = if(rsi > 65, color.red else color.yellow)
+plot(rsi, title = "RSI", color = color)
